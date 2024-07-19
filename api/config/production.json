@@ -1,0 +1,7 @@
+{
+  "host": "141.136.42.3",
+  "port": "5000",
+  "mongo_uri": "mongodb+srv://admin:dubol_7349_bst_MN@cluster0.vh7r5ry.mongodb.net/main?retryWrites=true&w=majority",
+  "jwt_key": "bst_dubol_admin777",
+  "allowed_origin": "http://busotaxi.com"
+}

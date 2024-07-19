@@ -1,0 +1,25 @@
+@mixin font-primary {
+  font-family: 'Fira Sans', sans-serif;
+}
+
+@mixin font-secondary {
+  font-family: 'Open Sans', sans-serif;
+}
+
+@mixin font-extra-title {
+  font-size: 70px;
+  font-weight: 600;
+
+  @media screen and (max-width: 1500px) {
+    font-size: 60px;
+  }
+
+  @media screen and (max-width: 300px) {
+    font-size: 55px;
+  }
+}
+
+@mixin font-title {
+  font-size: 30px;
+  font-weight: 600;
+}

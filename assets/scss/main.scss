@@ -1,0 +1,51 @@
+@import './modules/normalize';
+@import './modules/fonts';
+@import './modules/mixins';
+@import './modules/locomotive';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @include font-primary;
+}
+
+main {
+  margin-top: 50px;
+}
+
+h1 {
+  &.extra-title {
+    @include font-extra-title;
+    letter-spacing: -1px;
+  }
+
+  &.title {
+    @include font-title;
+    letter-spacing: -1px;
+  }
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+.font-secondary {
+  @include font-secondary;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+b {
+  font-weight: 600;
+}
+
+button {
+  border: none;
+}
