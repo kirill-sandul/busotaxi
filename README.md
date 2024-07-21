@@ -1,75 +1,9 @@
-# Nuxt 3 Minimal Starter
+# Busotaxi
+- The site was made for a small spain taxi agency. In the first page there originally was a calculator of distance that gives the special price, it worked with Google Maps API
+but for now it's disabled.
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+- On the second page (reservations) there are the calendar of reservations and enter in admin mode to add, edit and remove them.
+- To switch to the admin mode on reservations **click "registrarse" and enter login "employee_1" and password "12345678"**
 
-## Setup
-
-Make sure to install the dependencies:
-
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+# Build project
+To build the project run `npm run build` and then you can start `npm run start`, it starts both server and client in dev mode
