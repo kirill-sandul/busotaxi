@@ -11,7 +11,7 @@ router.post('/register', async (req, res) => {
   const { login, password } = req.body;
   
   const existed = await Employee.findOne({ login });
-  if(existed) return res.json({ message: 'Employee with this login is yet exist' });
+  if (existed) return res.status(401).json({ message: 'Employee with this login is yet exist' })
 
   const hashed_password = await bcrypt.hash(password, 12);
 
@@ -25,17 +25,17 @@ router.post('/login', async (req, res) => {
   const { login, password } = req.body;
 
   if(!login.trim()){
-    return res.json({ error: 'empty_login' });
+    return res.status(401).json({ error: 'empty_login' });
   }
   if(!password.trim()){
-    return res.json({ error: 'empty_password' })
+    return res.status(401).json({ error: 'empty_password' });
   }
 
   const employee = await Employee.findOne({ login });
-  if(!employee) return res.json({ error: 'employee_not_found' });
+  if (!employee) return res.status(401).json({ error: 'employee_not_found' });
 
   const password_match = await bcrypt.compare(password, employee.password);
-  if(!password_match) return res.json({ error: 'incorrect_password' });
+  if (!password_match) return res.status(401).json({ error: 'incorrect_password' });
 
   const token = jwt.sign(
     { employee_id: employee._id },

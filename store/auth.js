@@ -40,11 +40,14 @@ export const useAuthStore = defineStore('auth', {
         body: {
           login, password
         }
-      });
+      })
 
       const { token, employee_id } = response;
 
-      this.set_storage(token, employee_id);
+      if(!response.error) {
+        this.set_storage(token, employee_id);
+        reloadNuxtApp();
+      }
 
       return response;
     }

@@ -7,6 +7,8 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
+    "server": "npm run server --prefix api",
+    "start": "concurrently \"npm run server\" \"npm run dev\"",
     "postinstall": "nuxt prepare"
   },
   "proxy": "http://locahost:5000",
@@ -20,6 +22,7 @@
     "pinia": "^2.1.7"
   },
   "devDependencies": {
+    "concurrently": "^8.2.2",
     "sass": "^1.77.6"
   }
 }
